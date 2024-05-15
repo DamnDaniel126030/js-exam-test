@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "vitest": "^1.6.0"
+  },
+  "name": "js-exam-class",
+  "version": "1.0.0",
+  "main": "",
+  "devDependencies": {},
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
