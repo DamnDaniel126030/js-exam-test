@@ -48,4 +48,21 @@ describe('addPoint', () => {
 
 });
 
+describe('allParticipated', () => {
+  it('should throw no score error if there is no point added to the list', () => {
+    expect(() => {
+      exam.allParticipated()
+    }).toThrow("no score");
+  });
+
+  it('should return true if every score in the list is more than -1', () => {
+    exam.addPoint(40);
+    exam.addPoint(67);
+    exam.addPoint(45);
+    expect(exam.allParticipated()).toBeTruthy();
+  });
+
+
+})
+
 

@@ -20,7 +20,7 @@ export class Exam{
 
   allParticipated(){
     if (this.#points.length == 0){
-      return null;
+      throw new Error("There is no score in the list.");
     };
 
     allParticipatedInExam = true;
