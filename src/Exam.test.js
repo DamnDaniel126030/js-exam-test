@@ -62,7 +62,19 @@ describe('allParticipated', () => {
     expect(exam.allParticipated()).toBeTruthy();
   });
 
+  it('should return false if even one score in the list is -1', () => {
+    exam.addPoint(40);
+    exam.addPoint(67);
+    exam.addPoint(-1);
+    expect(exam.allParticipated()).toBeFalsy();
+  });
 
-})
+  it('should return false if every score in the list is -1', () => {
+    exam.addPoint(-1);
+    exam.addPoint(-1);
+    exam.addPoint(-1);
+    expect(exam.allParticipated()).toBeFalsy();
+  });
+});
 
 

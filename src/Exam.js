@@ -23,7 +23,7 @@ export class Exam{
       throw new Error("There is no score in the list.");
     };
 
-    allParticipatedInExam = true;
+    let allParticipatedInExam = true;
 
     this.#points.forEach(score => {
       if (score == -1){
