@@ -6,11 +6,15 @@ export class Exam{
   };
 
   addPoint(value){
-    if (value < -1 || value > 100){
+    if (value < -1 || value > 100 || value == null || value == ""){
+      throw new Error("The point can't be outside the [-1, 100] interval");
+    }
+    else if (isNaN(value)){
       throw new Error("The point can't be outside the [-1, 100] interval");
     }
     else{
       this.#points.push(value)
+      return true;
     }
   };
 
