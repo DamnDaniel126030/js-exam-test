@@ -36,10 +36,10 @@ export class Exam{
 
   numberOfFails(){
     if (this.#points.length == 0){
-      return null;
+      throw new Error("There is no score in the list.");
     };
 
-    numOfFails = 0;
+    let numOfFails = 0;
 
     this.#points.forEach(score => {
       if (score != -1 && score < 50){
@@ -52,10 +52,10 @@ export class Exam{
 
   numberOfSufficients(){
     if (this.#points.length == 0){
-      return null;
+      throw new Error("There is no score in the list.");
     };
 
-    numOfSufficients = 0;
+    let numOfSufficients = 0;
 
     this.#points.forEach(score => {
       if (score != -1 && score >= 50 && score <= 60){
@@ -68,10 +68,10 @@ export class Exam{
 
   numberOfAvarages(){
     if (this.#points.length == 0){
-      return null;
+      throw new Error("There is no score in the list.");
     };
 
-    numOfAvarages = 0;
+    let numOfAvarages = 0;
 
     this.#points.forEach(score => {
       if (score != -1 && score >= 61 && score <= 70){
@@ -84,10 +84,10 @@ export class Exam{
 
   numberOfGoods(){
     if (this.#points.length == 0){
-      return null;
+      throw new Error("There is no score in the list.");
     };
 
-    numOfGoods = 0;
+    let numOfGoods = 0;
 
     this.#points.forEach(score => {
       if (score != -1 && score >= 71 && score <= 80){
@@ -100,10 +100,10 @@ export class Exam{
 
   numberOfExcellents(){
     if (this.#points.length == 0){
-      return null;
+      throw new Error("There is no score in the list.");
     };
 
-    numOfExcellents = 0;
+    let numOfExcellents = 0;
 
     this.#points.forEach(score => {
       if (score != -1 && score >= 81){
@@ -116,10 +116,10 @@ export class Exam{
 
   suspicious(excellentStudents){
     if (this.#points.length == 0){
-      return null;
+      throw new Error("There is no score in the list.");
     };
 
-    numOfExcellents = 0;
+    let numOfExcellents = 0;
 
     this.#points.forEach(score => {
       if (score != -1 && score >= 81){
@@ -137,10 +137,10 @@ export class Exam{
 
   invalidExam(){
     if (this.#points.length == 0){
-      return null;
+      throw new Error("There is no score in the list.");
     };
     
-    numOfNonParticipants = 0;
+    let numOfNonParticipants = 0;
 
     this.#points.forEach(score => {
       if (score == -1){

@@ -77,4 +77,27 @@ describe('allParticipated', () => {
   });
 });
 
+describe('group', () => {
+  it('should throw no score error if there is no point added to the list', () => {
+    expect(() => {
+      exam.numberOfFails()
+    }).toThrow("no score");
+  });
+
+  it('should return 0 if every score in the list is above 50', () => {
+    exam.addPoint(60);
+    exam.addPoint(70);
+    exam.addPoint(80);
+    expect(exam.numberOfFails()).toEqual(0);
+  });
+
+  it('should return 0 if every score in the list is -1', () => {
+    exam.addPoint(-1);
+    exam.addPoint(-1);
+    exam.addPoint(-1);
+    expect(exam.numberOfFails()).toEqual(0);
+  });
+
+  
+});
 
